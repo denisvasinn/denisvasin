@@ -4,7 +4,7 @@ var router = express.Router();
 router
 .route('/')
 .get((req, res, next) => {
-    res.status(200).render('index.html').end();
+    res.status(200).render('index.html');
 })
 .post((req, res, next) => {
 

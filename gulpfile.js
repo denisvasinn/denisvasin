@@ -5,9 +5,10 @@ var sass = require('gulp-sass');
 var ts = require('gulp-typescript');
 var clean = require('gulp-clean');
 
-/*gulp.task('clean', () => {
-    return clean('public');
-});*/
+//gulp.task('clean', () => {
+//    return gulp.src('./client/**/*.js')
+//    .pipe(clean());
+//});
 
 gulp.task('sass', () => {
   return gulp.src('./client/**/*.scss')

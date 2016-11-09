@@ -6,15 +6,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var ContactsComponent = (function () {
+    function ContactsComponent() {
     }
-    AppComponent = __decorate([
+    ContactsComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n  <h1>Hello World!</h1>\n  <my-nav></my-nav>\n  <router-outlet></router-outlet>\n  "
+            template: "<h1>Contacts!</h1>"
         })
-    ], AppComponent);
-    return AppComponent;
+    ], ContactsComponent);
+    return ContactsComponent;
 }());
-exports.AppComponent = AppComponent;
+exports.ContactsComponent = ContactsComponent;
