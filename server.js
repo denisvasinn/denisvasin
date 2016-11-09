@@ -28,6 +28,7 @@ app.use((err, req, res, next) => {
 });
 
 //
-app.listen(config.port, () => {
-    console.log(`Server started on port ${config.port}`);
+app.set('port', (process.env.PORT || config.port));
+app.listen(app.get('port'), () => {
+    console.log(`Server started on port ${app.get('port')}`);
 });
