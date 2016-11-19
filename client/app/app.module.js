@@ -9,16 +9,16 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var router_1 = require('@angular/router');
 var common_1 = require('@angular/common');
+var forms_1 = require('@angular/forms');
 var app_component_1 = require('./app.component');
-var navigation_component_1 = require('./navigation.component');
 var home_component_1 = require('./home.component');
 var about_component_1 = require('./about.component');
-var contacts_component_1 = require('./contacts.component');
+var contact_component_1 = require('./contact.component');
 var routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: home_component_1.HomeComponent },
     { path: 'about', component: about_component_1.AboutComponent },
-    { path: 'contacts', component: contacts_component_1.ContactsComponent }
+    { path: 'contact', component: contact_component_1.ContactComponent }
 ];
 var AppModule = (function () {
     function AppModule() {
@@ -27,14 +27,14 @@ var AppModule = (function () {
         core_1.NgModule({
             imports: [
                 platform_browser_1.BrowserModule,
+                forms_1.FormsModule,
                 router_1.RouterModule.forRoot(routes)
             ],
             declarations: [
                 app_component_1.AppComponent,
-                navigation_component_1.NavigationComponent,
                 home_component_1.HomeComponent,
                 about_component_1.AboutComponent,
-                contacts_component_1.ContactsComponent
+                contact_component_1.ContactComponent
             ],
             bootstrap: [app_component_1.AppComponent],
             providers: [{ provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy }]

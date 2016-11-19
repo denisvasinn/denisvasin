@@ -9,10 +9,15 @@ var core_1 = require('@angular/core');
 var AppComponent = (function () {
     function AppComponent() {
     }
+    AppComponent.prototype.onScroll = function (event) {
+        console.log(event);
+        console.log(event.pageY);
+        this.scrolled = event.pageY;
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n  <h1>Hello World!</h1>\n  <my-nav></my-nav>\n  <router-outlet></router-outlet>\n  "
+            template: "\n  <div class=\"nav-bar\" (window:scroll)=\"onScroll($event)\" [ngClass]=\"{scrolled: scrolled}\">\n    <nav>\n        <ul>\n            <li class=\"logo\">\n              <a href=\"#/home\">\n                <h1>DENIS VASIN</h1>\n              </a>\n            </li>\n            <li><a [routerLink]=\"['home']\">Home</a></li>\n            <li><a [routerLink]=\"['about']\">About</a></li>\n            <li><a [routerLink]=\"['contact']\">Contact</a></li>\n        </ul>\n      </nav>\n  </div>\n  <router-outlet></router-outlet>\n  "
         })
     ], AppComponent);
     return AppComponent;

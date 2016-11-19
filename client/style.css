@@ -1,6 +1,105 @@
-body {
-  font: 100% Helvetica, sans-serif;
-  color: #333; }
-
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400");
 * {
-  background: #000; }
+  margin: 0;
+  padding: 0;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  background: #fff;
+  font: 100% "Roboto Condensed", sans-serif; }
+
+a, a:hover {
+  text-decoration: none; }
+
+.nav-bar {
+  background: #fff;
+  border-bottom: 1px solid #666;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  width: 100%; }
+  .nav-bar ul {
+    list-style-type: none;
+    overflow: hidden; }
+  .nav-bar li {
+    float: right;
+    height: 99px; }
+  .nav-bar li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px; }
+  .nav-bar li:hover:not(.logo) {
+    background-color: #6be5b4; }
+    .nav-bar li:hover:not(.logo) a {
+      color: #fff; }
+  .nav-bar .logo {
+    float: left; }
+    .nav-bar .logo a {
+      padding: 0 40px; }
+    .nav-bar .logo h1 {
+      font: 60px 'Roboto Condensed', sans-serif;
+      font-weight: 1px;
+      margin: 10px 30px;
+      letter-spacing: -5px; }
+
+.scrolled {
+  box-shadow: 0 0 5px #666; }
+
+@media screen and (max-width: 600px) {
+  body {
+    background: #666; }
+  .nav-bar ul {
+    height: 300px; }
+  .nav-bar li {
+    float: none !important;
+    height: auto; }
+  .nav-bar li:not(.logo) {
+    background: #666; }
+    .nav-bar li:not(.logo) a {
+      color: #6be5b4; }
+  .content {
+    padding-top: 300px !important; }
+  .image {
+    float: none; } }
+
+.content {
+  padding-top: 120px;
+  margin: 0 auto;
+  width: 900px; }
+  .content p {
+    padding: 0 30px; }
+
+.image {
+  border: 1px solid #666;
+  border-radius: 300px;
+  height: 300px;
+  float: left;
+  margin: 30px;
+  width: 300px; }
+
+.form-group input, .form-group textarea {
+  margin: 0 auto; }
+
+.form-control {
+  border: 1px solid #6be5b4;
+  border-radius: 8px;
+  display: block;
+  color: #666;
+  padding: 10px 12px;
+  margin: 15px;
+  width: 50%; }
+
+.btn {
+  background: transparent;
+  border: 1px solid #6be5b4;
+  border-radius: 8px;
+  color: #6be5b4;
+  padding: 12px 25px; }
+
+.btn:hover {
+  background: #6be5b4;
+  color: #fff; }

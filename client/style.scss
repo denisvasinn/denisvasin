@@ -1,10 +1,162 @@
-$font-stack:    Helvetica, sans-serif;
-$primary-color: #333;
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400');
+
+$font-stack:    'Roboto Condensed', sans-serif;
+$primary-color: #6be5b4;
+$secondary-color: #666;
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 body {
+  background: #fff;
   font: 100% $font-stack;
-  color: $primary-color;
 }
-*{
-    background: #000;
+
+a, a:hover { text-decoration: none; }
+
+
+.nav-bar {
+  background: #fff;
+  border-bottom: 1px solid $secondary-color;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  ul{
+    list-style-type: none;
+    overflow: hidden;
+  }
+
+  li{
+     float: right;
+     height: 99px;
+  }
+
+  li a {
+    display: block;
+    color: $secondary-color;
+    text-align: center;
+    padding: 14px 16px;
+  }
+
+  li:hover:not(.logo) {
+    background-color: $primary-color;
+
+    a {
+      color: #fff;
+    }
+  }
+
+  .logo {
+    float: left;
+
+    a {
+      padding: 0 40px;
+    }
+
+    h1 {
+      font: 60px 'Roboto Condensed', sans-serif;
+      font-weight: 1px;
+      margin: 10px 30px;
+      letter-spacing: -5px;;
+    }
+  }
+}
+
+.scrolled {
+  box-shadow: 0 0 5px $secondary-color;
+}
+
+@media screen and (max-width: 600px){
+    body {
+      background: $secondary-color;
+    }
+
+    .nav-bar {
+      ul {
+        height: 300px;
+      }
+
+      li {
+        float: none !important;
+        height: auto;
+      }
+
+      li:not(.logo) {
+        background: $secondary-color;
+
+        a {
+          color: $primary-color;
+        }
+      }
+    }
+
+    .content {
+      padding-top: 300px !important;
+    }
+
+    .image {
+      float: none;
+    }
+}
+
+.content {
+  padding-top: 120px;
+  margin: 0 auto;
+  width: 900px;
+
+  p {
+    padding: 0 30px;
+  }
+}
+
+.image {
+  border: 1px solid $secondary-color; 
+  border-radius: 300px;
+  height: 300px;
+  float: left;
+  margin: 30px;
+  width: 300px;
+}
+
+
+.form-group {
+  input, textarea {
+    margin: 0 auto;
+  }
+}
+
+.form-control {
+  border: 1px solid $primary-color;
+  border-radius: 8px;
+  display: block;
+  color: $secondary-color;
+  padding: 10px 12px;
+  margin: 15px;
+  width: 50%;
+}
+
+.btn {
+  background: transparent;
+  border: 1px solid $primary-color;
+  border-radius: 8px;
+  color: $primary-color;
+  padding: 12px 25px;
+}
+
+.btn:hover {
+  background: $primary-color;
+  color: #fff;
+}
+
+.btn-defaul{
+
 }

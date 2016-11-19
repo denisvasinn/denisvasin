@@ -11,13 +11,13 @@ var clean = require('gulp-clean');
 //});
 
 gulp.task('sass', () => {
-  return gulp.src('./client/**/*.scss')
+  return gulp.src('./client/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./client'));
 });
  
 gulp.task('sass:watch', () => {
-  gulp.watch('./client/**/*.scss', ['sass']);
+    gulp.watch('./client/*.scss', ['sass']);
 });
 
 gulp.task('ts', () => {
@@ -26,11 +26,9 @@ gulp.task('ts', () => {
         .pipe(gulp.dest('./client/app'));
 });
 
-gulp.task('build', ['sass', 'ts'], () => {
-    gulp.watch('./client/app/**/*.scss', ['sass']);
-
-    var watcher = gulp.watch('./client/app/*.js', ['ts']);
-    watcher.on('change', (event) => {
-    console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-    });
+gulp.task('ts:watch', () => {
+    gulp.watch('./client/app/*.ts', ['ts']);
 });
+
+gulp.task('default', ['sass', 'ts']);
+gulp.task('watch', ['sass:watch', 'ts:watch']);
