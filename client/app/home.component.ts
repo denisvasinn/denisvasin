@@ -3,9 +3,17 @@ import { Component } from '@angular/core';
 @Component({
   template: `
     <div class="content">
-      <img class="image" src="/images/photo.jpg" alt="Photo">
-      <div>
-        <p>Hello! My name is Denis. According to Christian tradition, Saint Denis (also called Dionysius, Dennis, or Denys) is a Christian martyr and saint. In the third century, he was Bishop of Paris. He was martyred, with his companions Rusticus and Eleutherius, in connection with the Decian persecution of Christians, shortly after 250 AD. Denis is said to have picked his head up after being decapitated, walked ten kilometres (six miles), while preaching a sermon of repentance the entire way, making him one of many cephalophores in hagiology. He is venerated in the Roman Catholic Church as patron of Paris, France, and as one of the Fourteen Holy Helpers. The medieval and modern French name "Denis" derives from the ancient name Dionysius.</p>
+      <div class="main-page">
+        <img class="image" src="/images/photo.jpg" alt="Photo">
+        <div>
+          <p> Ahoy there! My name is Denis. I am 22 years old and i study in V.I. Vernadsky Crimean Federal University. I am really like JavaScript. If you want to see my projects please visit my 
+            <a href="https://github.com/denisvasinn">GitHub</a>.
+          </p>
+          <p> I will be glad to work with team or single customer. Want to work with me?
+            Drop me a line using the form or connect through social media
+            <a href="/#/contact">here!</a>
+          </p>
+        </div>
       </div>
     </div>
     <footer>

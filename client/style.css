@@ -27,7 +27,11 @@ h2 {
   letter-spacing: -3px; }
 
 h3 {
-  font-size: 20px; }
+  font-size: 25px; }
+
+p {
+  font-size: 15px;
+  padding: 10px 0; }
 
 .inline {
   display: inline-block; }
@@ -86,8 +90,13 @@ h3 {
   padding-top: 120px;
   margin: 0 auto;
   width: 900px; }
-  .content p {
-    padding: 50px 30px; }
+
+.main-page a {
+  color: #6be5b4; }
+
+.main-page p:first-child {
+  padding: 0 20px;
+  padding-top: 100px; }
 
 .image {
   border-radius: 300px;
@@ -101,7 +110,7 @@ h3 {
   margin: 20px 0; }
   .form-group label {
     display: block;
-    font-size: 30px; }
+    font-size: 20px; }
   .form-group a {
     color: #6be5b4;
     font-size: 20px; }
@@ -111,7 +120,7 @@ h3 {
   border-bottom: 1px solid #666;
   display: block;
   color: #666;
-  font-size: 20px;
+  font-size: 17px;
   padding: 10px 12px;
   margin: 15px 5px;
   width: 98%; }
@@ -144,9 +153,19 @@ h3 {
   #sn li, #sn a {
     display: block; }
 
+.resume h2 {
+  text-align: center; }
+
+.resume li {
+  padding: 10px;
+  color: #666; }
+
 footer {
   display: block;
+  clear: both;
   float: none;
-  margin-top: 50px !important; }
+  margin-top: 100px !important; }
   footer p {
+    display: block;
+    float: none;
     text-align: center; }

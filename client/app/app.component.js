@@ -10,8 +10,6 @@ var AppComponent = (function () {
     function AppComponent() {
     }
     AppComponent.prototype.onScroll = function (event) {
-        console.log(event);
-        console.log(event.pageY);
         this.scrolled = event.pageY;
     };
     AppComponent = __decorate([

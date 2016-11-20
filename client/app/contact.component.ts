@@ -8,7 +8,7 @@ import { Message } from './message';
     <div class="content">
       
       <div class="inline contact">
-        <h2>Contact</h2>
+        <h3>Contact</h3>
         <hr>
         <div class="form-group">
           <label for="tel">Call:</label>
@@ -32,7 +32,7 @@ import { Message } from './message';
       </div>
 
       <div class="inline q-message">
-        <h2>Quick Message</h2>
+        <h3>Quick Message</h3>
         <hr>
         <form (ngSubmit)="onSubmit()" #messageForm="ngForm">
           <div class="form-group">

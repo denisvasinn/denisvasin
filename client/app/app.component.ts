@@ -25,8 +25,6 @@ export class AppComponent {
   private scrolled: number;
 
   onScroll(event) {
-    console.log(event);
-    console.log(event.pageY);
     this.scrolled = event.pageY;
   }
  }

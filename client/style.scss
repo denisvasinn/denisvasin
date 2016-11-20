@@ -36,7 +36,12 @@ h2 {
   letter-spacing: -3px;
 }
 
-h3 { font-size: 20px; }
+h3 { font-size: 25px; }
+
+p {
+  font-size: 15px;
+  padding: 10px 0;
+}
 
 .inline { display: inline-block; }
 
@@ -131,12 +136,17 @@ h3 { font-size: 20px; }
   padding-top: 120px;
   margin: 0 auto;
   width: 900px;
-
-  p {
-    padding: 50px 30px;
-  }
 }
 
+.main-page {
+  a {
+    color: $primary-color;
+  }
+  p:first-child {
+    padding: 0 20px;
+    padding-top: 100px;
+  }
+}
 .image {
   border-radius: 300px;
   height: 300px;
@@ -152,7 +162,7 @@ h3 { font-size: 20px; }
 
   label {
     display: block;
-    font-size: 30px;
+    font-size: 20px;
   }
 
   a {
@@ -166,7 +176,7 @@ h3 { font-size: 20px; }
   border-bottom: 1px solid $secondary-color;
   display: block;
   color: $secondary-color;
-  font-size: 20px;
+  font-size: 17px;
   padding: 10px 12px;
   margin: 15px 5px;
   width: 98%;
@@ -213,13 +223,25 @@ h3 { font-size: 20px; }
   }
 }
 
+.resume {
+  h2 {
+    text-align: center;
+  }
+  li {
+    padding: 10px;
+    color: $secondary-color;
+  }
+}
 
 footer {
   display: block;
+  clear: both;
   float: none;
-  margin-top: 50px !important;
+  margin-top: 100px !important;
 
   p {
+    display: block;
+    float: none;
     text-align: center;
   }
 }
