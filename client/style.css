@@ -14,6 +14,24 @@ body {
 a, a:hover {
   text-decoration: none; }
 
+a, h1, h2, h3, p, label, textarea {
+  color: #666;
+  font-family: 'Roboto Condensed', sans-serif; }
+
+h1 {
+  font-size: 60px;
+  letter-spacing: -5px; }
+
+h2 {
+  font-size: 40px;
+  letter-spacing: -3px; }
+
+h3 {
+  font-size: 20px; }
+
+.inline {
+  display: inline-block; }
+
 .nav-bar {
   background: #fff;
   border-bottom: 1px solid #666;
@@ -27,11 +45,13 @@ a, a:hover {
   .nav-bar li {
     float: right;
     height: 99px; }
-  .nav-bar li a {
-    display: block;
-    color: #666;
-    text-align: center;
-    padding: 14px 16px; }
+    .nav-bar li a {
+      display: block;
+      color: #666;
+      text-align: center;
+      padding: 14px 16px; }
+  .nav-bar li:not(.logo) a {
+    padding: 34px 16px; }
   .nav-bar li:hover:not(.logo) {
     background-color: #6be5b4; }
     .nav-bar li:hover:not(.logo) a {
@@ -39,12 +59,8 @@ a, a:hover {
   .nav-bar .logo {
     float: left; }
     .nav-bar .logo a {
-      padding: 0 40px; }
-    .nav-bar .logo h1 {
-      font: 60px 'Roboto Condensed', sans-serif;
-      font-weight: 1px;
-      margin: 10px 30px;
-      letter-spacing: -5px; }
+      padding: 0 40px;
+      margin: 15px 0; }
 
 .scrolled {
   box-shadow: 0 0 5px #666; }
@@ -71,35 +87,66 @@ a, a:hover {
   margin: 0 auto;
   width: 900px; }
   .content p {
-    padding: 0 30px; }
+    padding: 50px 30px; }
 
 .image {
-  border: 1px solid #666;
   border-radius: 300px;
   height: 300px;
   float: left;
   margin: 30px;
   width: 300px; }
 
-.form-group input, .form-group textarea {
-  margin: 0 auto; }
+.form-group {
+  display: block;
+  margin: 20px 0; }
+  .form-group label {
+    display: block;
+    font-size: 30px; }
+  .form-group a {
+    color: #6be5b4;
+    font-size: 20px; }
 
 .form-control {
-  border: 1px solid #6be5b4;
-  border-radius: 8px;
+  border: none;
+  border-bottom: 1px solid #666;
   display: block;
   color: #666;
+  font-size: 20px;
   padding: 10px 12px;
-  margin: 15px;
-  width: 50%; }
+  margin: 15px 5px;
+  width: 98%; }
+
+.form-control:focus {
+  border-bottom: 1px solid #6be5b4; }
 
 .btn {
-  background: transparent;
-  border: 1px solid #6be5b4;
+  background: #666;
+  border: 1px solid #666;
   border-radius: 8px;
-  color: #6be5b4;
+  color: #fff;
   padding: 12px 25px; }
 
 .btn:hover {
-  background: #6be5b4;
-  color: #fff; }
+  background: transparent;
+  border: 1px solid #666;
+  color: #666; }
+
+.q-message, .contact {
+  padding: 10px;
+  width: 47%; }
+
+.contact {
+  float: left; }
+
+#sn {
+  list-style-type: none;
+  overflow: hidden; }
+  #sn li, #sn a {
+    display: block; }
+
+footer {
+  display: block;
+  float: none;
+  margin-top: 50px !important; }
+  footer p {
+    text-align: center; }

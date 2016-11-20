@@ -21,6 +21,25 @@ body {
 
 a, a:hover { text-decoration: none; }
 
+a, h1, h2, h3, p, label, textarea { 
+  color: $secondary-color;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1 {
+  font-size: 60px;
+  letter-spacing: -5px;
+}
+
+h2 { 
+  font-size: 40px;
+  letter-spacing: -3px;
+}
+
+h3 { font-size: 20px; }
+
+.inline { display: inline-block; }
+
 
 .nav-bar {
   background: #fff;
@@ -38,13 +57,19 @@ a, a:hover { text-decoration: none; }
   li{
      float: right;
      height: 99px;
+
+    a {
+      display: block;
+      color: $secondary-color;
+      text-align: center;
+      padding: 14px 16px;
+    }
   }
 
-  li a {
-    display: block;
-    color: $secondary-color;
-    text-align: center;
-    padding: 14px 16px;
+  li:not(.logo) {
+    a {
+      padding: 34px 16px;
+    }
   }
 
   li:hover:not(.logo) {
@@ -60,13 +85,7 @@ a, a:hover { text-decoration: none; }
 
     a {
       padding: 0 40px;
-    }
-
-    h1 {
-      font: 60px 'Roboto Condensed', sans-serif;
-      font-weight: 1px;
-      margin: 10px 30px;
-      letter-spacing: -5px;;
+      margin: 15px 0;
     }
   }
 }
@@ -114,12 +133,11 @@ a, a:hover { text-decoration: none; }
   width: 900px;
 
   p {
-    padding: 0 30px;
+    padding: 50px 30px;
   }
 }
 
 .image {
-  border: 1px solid $secondary-color; 
   border-radius: 300px;
   height: 300px;
   float: left;
@@ -129,34 +147,79 @@ a, a:hover { text-decoration: none; }
 
 
 .form-group {
-  input, textarea {
-    margin: 0 auto;
+  display: block;
+  margin: 20px 0;
+
+  label {
+    display: block;
+    font-size: 30px;
+  }
+
+  a {
+    color: $primary-color;
+    font-size: 20px;
   }
 }
 
 .form-control {
-  border: 1px solid $primary-color;
-  border-radius: 8px;
+  border: none;
+  border-bottom: 1px solid $secondary-color;
   display: block;
   color: $secondary-color;
+  font-size: 20px;
   padding: 10px 12px;
-  margin: 15px;
-  width: 50%;
+  margin: 15px 5px;
+  width: 98%;
+}
+
+.form-control:focus {
+  border-bottom: 1px solid $primary-color;
 }
 
 .btn {
-  background: transparent;
-  border: 1px solid $primary-color;
+  background: $secondary-color;
+  border: 1px solid $secondary-color;
   border-radius: 8px;
-  color: $primary-color;
+  color: #fff;
   padding: 12px 25px;
 }
 
 .btn:hover {
-  background: $primary-color;
-  color: #fff;
+  background: transparent;
+  border: 1px solid $secondary-color;
+  color: $secondary-color;
 }
 
 .btn-defaul{
 
+}
+
+.q-message, .contact {
+  padding: 10px;
+  width: 47%;
+}
+
+.contact {
+  float: left;
+}
+
+//contact
+#sn {
+  list-style-type: none;
+  overflow: hidden;
+
+  li, a {
+    display: block;
+  }
+}
+
+
+footer {
+  display: block;
+  float: none;
+  margin-top: 50px !important;
+
+  p {
+    text-align: center;
+  }
 }

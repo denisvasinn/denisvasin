@@ -1,9 +1,8 @@
 export class Message {
     constructor(
-        public firstName: string = '',
-        public lastName: string = '',
+        public name: string = '',
         public email: string = '',
-        public subject: string = 'From personal web-site',
-        public message: string = 'Some text here.'
+        public subject: string = '',
+        public message: string = ''
     ) { }
 }

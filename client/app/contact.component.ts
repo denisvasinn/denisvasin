@@ -6,53 +6,71 @@ import { Message } from './message';
   moduleId: module.id,
   template: `
     <div class="content">
-      <form (ngSubmit)="onSubmit()" #messageForm="ngForm">
+      
+      <div class="inline contact">
+        <h2>Contact</h2>
+        <hr>
         <div class="form-group">
-          <label for="firstName">First Name</label>
-          <input type="text" class="form-control" id="firstName"
-                required
-                [(ngModel)]="model.firstName" name="firstName"
-                #firstName="ngModel"
-                placeholder="First Name" >
+          <label for="tel">Call:</label>
+          <a id="tel" href="tel:+79788869428">+79788869428</a>
         </div>
         <div class="form-group">
-          <label for="lastName">Last Name</label>
-          <input type="text" class="form-control" id="lastName"
-                required
-                [(ngModel)]="model.lastName" name="lastName"
-                #lastName="ngModel"
-                placeholder="Last Name" >
+          <label for="ms">Email:</label>
+          <a id="ms" href="mailto:denis.vasin@outlook.com">denis.vasin@outlook.com</a>
         </div>
         <div class="form-group">
-          <label for="subject">Subject</label>
-          <input type="text" class="form-control" id="subject"
-                required
-                [(ngModel)]="model.subject" name="subject"
-                #subject="ngModel"
-                placeholder="Subject" >
+          <label for="sn">Connect:</label>
+          <ul id="sn">
+            <li id="vk">
+              <a href="https://vk.com/id33770477">VK</a>
+            </li>
+            <li id="fb">
+              <a href="https://www.facebook.com/denis.vasin01">Facebook</a>
+            </li>
+          </ul>
         </div>
-        <div class="form-group">
-          <label for="email">E-mail</label>
-          <input type="text" class="form-control" id="email"
-                required
-                [(ngModel)]="model.email" name="email"
-                #email="ngModel"
-                placeholder="E-mail" >
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea type="text" class="form-control" id="message"
-                required
-                [(ngModel)]="model.message" name="message"
-                #message="ngModel"
-                placeholder="Message"
-                rows="10" >
-          </textarea>
-        </div>
+      </div>
 
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
+      <div class="inline q-message">
+        <h2>Quick Message</h2>
+        <hr>
+        <form (ngSubmit)="onSubmit()" #messageForm="ngForm">
+          <div class="form-group">
+            <input type="text" class="form-control" id="name"
+                  [(ngModel)]="model.name" name="name"
+                  #name="ngModel"
+                  placeholder="Name" >
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="subject"
+                  [(ngModel)]="model.subject" name="subject"
+                  #subject="ngModel"
+                  placeholder="Subject" >
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="email"
+                  [(ngModel)]="model.email" name="email"
+                  #email="ngModel"
+                  placeholder="E-mail" >
+          </div>
+          <div class="form-group">
+            <textarea type="text" class="form-control" id="message"
+                  [(ngModel)]="model.message" name="message"
+                  #message="ngModel"
+                  placeholder="Message"
+                  rows="5" >
+            </textarea>
+          </div>
+
+          <div>
+            <input type="submit" class="btn btn-default" value="Submit">
+          </div>
+        </form>
+      </div>
     </div>
+    <footer>
+      <p>2016 All rights reserved.</p>
+    </footer>
   `
 })
 
