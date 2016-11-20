@@ -53,6 +53,7 @@ p {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1;
 
   ul{
     list-style-type: none;
@@ -71,11 +72,11 @@ p {
     }
   }
 
-  li:not(.logo) {
+ /* li:not(.logo) {
     a {
       padding: 34px 16px;
     }
-  }
+  }*/
 
   li:hover:not(.logo) {
     background-color: $primary-color;
@@ -104,6 +105,21 @@ p {
       background: $secondary-color;
     }
 
+    .content { width: 100% !important; }
+
+
+    h2, h3, p, label { color: #fff; }
+
+    div { display: block; }
+
+    .image, .main-page {
+      display: block;
+      float: none !important;
+      clear: both !important;
+      margin: 0 auto !important;
+      position: relative;
+    }
+
     .nav-bar {
       ul {
         height: 300px;
@@ -111,7 +127,7 @@ p {
 
       li {
         float: none !important;
-        height: auto;
+        height: 50px;
       }
 
       li:not(.logo) {
@@ -119,6 +135,7 @@ p {
 
         a {
           color: $primary-color;
+          padding: 14px 16px !important;
         }
       }
     }
@@ -142,8 +159,10 @@ p {
   a {
     color: $primary-color;
   }
-  p:first-child {
+  p{
     padding: 0 20px;
+  }
+  p:first-child {
     padding-top: 100px;
   }
 }

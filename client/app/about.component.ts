@@ -12,9 +12,9 @@ import { Component } from '@angular/core';
       <hr>
       <br>
       <ul>
-        <li>Junior Web developer able to build a Web presence from the ground up -- from concept, navigation, layout and programming to UX and SEO</li>
-        <li>Skilled at writing well-designed, testable and efficient code using current best practices in Web development</li>
-        <li>Fast learner, hard worker and team player who is proficient in an array of scripting languages and multimedia Web tools</li>
+        <li><p>Junior Web developer able to build a Web presence from the ground up -- from concept, navigation, layout and programming to UX and SEO</p></li>
+        <li><p>Skilled at writing well-designed, testable and efficient code using current best practices in Web development</p></li>
+        <li><p>Fast learner, hard worker and team player who is proficient in an array of scripting languages and multimedia Web tools</p></li>
       </ul>
       <br>
       <hr>
