@@ -25,12 +25,9 @@ import { Component } from '@angular/core';
       <hr>
       <h3>Education</h3>
       <hr>
-      <p>V.I. Vernadsky Crimean Federal University. Physics and Technology Institute 2014-2017</p>
+      <p>V.I. Vernadsky Crimean Federal University. Physics and Technology Institute 2016-2018</p>
     </div>
   </div>
-  <footer>
-    <p>2016 All rights reserved.</p>
-  </footer>
   `
 })
 

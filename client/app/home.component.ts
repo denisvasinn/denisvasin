@@ -16,9 +16,6 @@ import { Component } from '@angular/core';
         </div>
       </div>
     </div>
-    <footer>
-      <p>2016 All rights reserved.</p>
-    </footer>
   `
 })
 

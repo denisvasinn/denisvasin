@@ -12,10 +12,12 @@ var AppComponent = (function () {
     AppComponent.prototype.onScroll = function (event) {
         this.scrolled = event.pageY;
     };
+    AppComponent.prototype.smMenuClick = function (event) {
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n  <div class=\"nav-bar\" (window:scroll)=\"onScroll($event)\" [ngClass]=\"{scrolled: scrolled}\">\n    <nav>\n        <ul>\n            <li class=\"logo\">\n              <a href=\"#/home\">\n                <h1>DENIS VASIN</h1>\n              </a>\n            </li>\n            <li><a [routerLink]=\"['home']\">Home</a></li>\n            <li><a [routerLink]=\"['about']\">About</a></li>\n            <li><a [routerLink]=\"['contact']\">Contact</a></li>\n        </ul>\n      </nav>\n  </div>\n  <router-outlet></router-outlet>\n  "
+            template: "\n  <header (window:scroll)=\"onScroll($event)\" [ngClass]=\"{scrolled: scrolled}\">\n    <nav class=\"nav-bar\">\n        <a class=\"logo\" href=\"#/home\">\n          <h1>DENIS VASIN</h1>\n        </a>\n        <a href=\"#\" id=\"small-menu\" class=\"nav-item\" (click)=\"smMenuClick($event)\">Menu</a>\n        <ul>\n            <li class=\"nav-item\"><a [routerLink]=\"['home']\">Home</a></li>\n            <li class=\"nav-item\"><a [routerLink]=\"['about']\">About</a></li>\n            <li class=\"nav-item\"><a [routerLink]=\"['contact']\">Contact</a></li>\n        </ul>\n      </nav>\n  </header>\n  <router-outlet></router-outlet>\n  <footer>\n    <p>2016 All rights reserved.</p>\n  </footer>\n  "
         })
     ], AppComponent);
     return AppComponent;

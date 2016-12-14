@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400');
 
-$font-stack:    'Roboto Condensed', sans-serif;
+$font-stack: 'Roboto Condensed', sans-serif;
 $primary-color: #6be5b4;
-$secondary-color: #666;
+$secondary-color: #555;
 
 * {
   margin: 0;
@@ -45,64 +45,102 @@ p {
 
 .inline { display: inline-block; }
 
-
-.nav-bar {
-  background: #fff;
+header { 
+  background: #fff; 
   border-bottom: 1px solid $secondary-color;
-  height: 100px;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;
+}
+
+header::after{
+  content: ".";
+  display: block;
+  clear: both;
+  height: 0; 
+}
+
+.nav-bar {
+  height: 80px;
 
   ul{
+    float: right;
     list-style-type: none;
     overflow: hidden;
+    height: 100%;
   }
 
   li{
-     float: right;
-     height: 99px;
-
-    a {
-      display: block;
-      color: $secondary-color;
-      text-align: center;
-      padding: 14px 16px;
-    }
+    display: inline-block;
+    height: 100%;
+    width: 75px;
   }
-
- /* li:not(.logo) {
-    a {
-      padding: 34px 16px;
-    }
-  }*/
 
   li:hover:not(.logo) {
     background-color: $primary-color;
 
-    a {
+    a{
       color: #fff;
     }
   }
 
   .logo {
     float: left;
-
-    a {
-      padding: 0 40px;
-      margin: 15px 0;
-    }
+    text-align: center;
+    line-height: 80px;
+    padding: 0 16px;
+    height: 100%;
   }
+}
+
+.nav-item{
+    display: block;
+    color: $secondary-color;
+    text-align: center;
+    line-height: 80px;
+    padding: 0 16px;
+    position: relative;
+    height: 100%;
 }
 
 .scrolled {
   box-shadow: 0 0 5px $secondary-color;
 }
 
+#small-menu { display: none; }
+
 @media screen and (max-width: 600px){
     body {
       background: $secondary-color;
+    }
+
+    #small-menu{ 
+      display: block;
+      float: right;
+    }
+
+    .nav-bar ul{
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      height: auto;
+
+      li{
+        display: block;
+        height: 50px;
+        width: 100%;
+
+        a{
+          display: block;
+          line-height: 50px;
+          height: 100%;
+          padding: 0;
+          width: 100%;
+        }
+      }
     }
 
     .content { width: 100% !important; }
@@ -118,26 +156,6 @@ p {
       clear: both !important;
       margin: 0 auto !important;
       position: relative;
-    }
-
-    .nav-bar {
-      ul {
-        height: 300px;
-      }
-
-      li {
-        float: none !important;
-        height: 50px;
-      }
-
-      li:not(.logo) {
-        background: $secondary-color;
-
-        a {
-          color: $primary-color;
-          padding: 14px 16px !important;
-        }
-      }
     }
 
     .content {

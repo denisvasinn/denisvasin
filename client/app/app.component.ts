@@ -3,21 +3,23 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'my-app',
   template: `
-  <div class="nav-bar" (window:scroll)="onScroll($event)" [ngClass]="{scrolled: scrolled}">
-    <nav>
+  <header (window:scroll)="onScroll($event)" [ngClass]="{scrolled: scrolled}">
+    <nav class="nav-bar">
+        <a class="logo" href="#/home">
+          <h1>DENIS VASIN</h1>
+        </a>
+        <a href="#" id="small-menu" class="nav-item" (click)="smMenuClick($event)">Menu</a>
         <ul>
-            <li class="logo">
-              <a href="#/home">
-                <h1>DENIS VASIN</h1>
-              </a>
-            </li>
-            <li><a [routerLink]="['home']">Home</a></li>
-            <li><a [routerLink]="['about']">About</a></li>
-            <li><a [routerLink]="['contact']">Contact</a></li>
+            <li class="nav-item"><a [routerLink]="['home']">Home</a></li>
+            <li class="nav-item"><a [routerLink]="['about']">About</a></li>
+            <li class="nav-item"><a [routerLink]="['contact']">Contact</a></li>
         </ul>
       </nav>
-  </div>
+  </header>
   <router-outlet></router-outlet>
+  <footer>
+    <p>2016 All rights reserved.</p>
+  </footer>
   `
 })
 
@@ -27,4 +29,8 @@ export class AppComponent {
   onScroll(event) {
     this.scrolled = event.pageY;
   }
- }
+
+  smMenuClick(event) {
+
+  }
+}
