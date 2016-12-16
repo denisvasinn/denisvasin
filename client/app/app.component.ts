@@ -17,7 +17,9 @@ import { Component } from '@angular/core';
       </ul>
     </nav>
   </header>
-  <router-outlet></router-outlet>
+  <article>
+    <router-outlet></router-outlet>
+  </article>
   <footer>
     <p>2016 All rights reserved.</p>
   </footer>
@@ -29,9 +31,5 @@ export class AppComponent {
 
   onScroll(event) {
     this.scrolled = event.pageY;
-  }
-
-  smMenuClick(event) {
-
   }
 }

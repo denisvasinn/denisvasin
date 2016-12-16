@@ -7,7 +7,7 @@ import { Message } from './message';
   template: `
     <div class="content">
       
-      <div class="inline contact">
+      <div class="conteiner contact">
         <h3>Contact</h3>
         <hr>
         <div class="form-group">
@@ -31,7 +31,7 @@ import { Message } from './message';
         </div>
       </div>
 
-      <div class="inline q-message">
+      <div class="conteiner q-message">
         <h3>Quick Message</h3>
         <hr>
         <form (ngSubmit)="onSubmit()" #messageForm="ngForm">

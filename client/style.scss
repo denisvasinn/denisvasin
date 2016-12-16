@@ -8,9 +8,6 @@ $secondary-color: #555;
   margin: 0;
   padding: 0;
   outline: none;
-
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -38,12 +35,7 @@ h2 {
 
 h3 { font-size: 25px; }
 
-p {
-  font-size: 15px;
-  padding: 10px 0;
-}
-
-.inline { display: inline-block; }
+p { font-size: 15px; }
 
 header { 
   background: #fff; 
@@ -52,13 +44,6 @@ header {
   top: 0;
   width: 100%;
   z-index: 1;
-}
-
-header::after{
-  content: ".";
-  display: block;
-  clear: both;
-  height: 0; 
 }
 
 .nav-bar {
@@ -77,89 +62,46 @@ header::after{
 .logo-item{ flex-grow: 5; }
 
 .nav-item{
-    border-bottom: 2px solid transparent;
     flex-grow: 1;
     transition: all 0.2s ease-in-out;
     color: $secondary-color;
     text-align: center;
-    padding: 10px 0;
+    
+    a{
+      border-bottom: 2px solid transparent;
+    }
 }
 
-.nav-item:hover { border-bottom: 2px solid $primary-color; }
+.nav-item a:hover { border-bottom: 2px solid $primary-color; }
 
 .scrolled { box-shadow: 0 0 5px $secondary-color; }
 
-@media screen and (max-width: 600px){
-    body {
-      background: $secondary-color;
-    }
-
-    .nav-bar ul{
-      flex-direction: column;
-      padding: 0;
-    }
-    .nav-item{ 
-      background: $secondary-color;
-      width: 100%;
-      a{
-        color: #fff;
-      }
-    }
-
-    .nav-item:hover{
-      background: $primary-color;
-    }
-
-    .content { width: 100% !important; }
-
-
-    h2, h3, p, label { color: #fff; }
-
-    div { display: block; }
-
-    .image, .main-page {
-      display: block;
-      float: none !important;
-      clear: both !important;
-      margin: 0 auto !important;
-      position: relative;
-    }
-
-    .content {
-      padding-top: 300px !important;
-    }
-
-    .image {
-      float: none;
-    }
-}
-
 .content {
-  padding: 10px;
-  padding-top: 100px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 70px;
+  margin-top: 100px;
   width: auto;
 }
 
-.main-page {
-  a {
-    color: $primary-color;
-  }
-  p{
-    padding: 0 20px;
-  }
-  p:first-child {
-    padding-top: 100px;
-  }
+.conteiner{
+  margin: 0 30px;
+  padding: 10px;
 }
-.image {
+
+.image{
   border-radius: 300px;
   height: 300px;
-  float: left;
-  margin: 30px;
   width: 300px;
 }
 
+.contact, .q-start{
+  align-self: flex-start;
+  flex-basis: 45%;
+}
 
 .form-group {
   display: block;
@@ -197,45 +139,13 @@ header::after{
   border-radius: 8px;
   color: #fff;
   padding: 12px 25px;
+  transition: all 0.2s ease-in-out;
 }
 
 .btn:hover {
   background: transparent;
   border: 1px solid $secondary-color;
   color: $secondary-color;
-}
-
-.btn-defaul{
-
-}
-
-.q-message, .contact {
-  padding: 10px;
-  width: 47%;
-}
-
-.contact {
-  float: left;
-}
-
-//contact
-#sn {
-  list-style-type: none;
-  overflow: hidden;
-
-  li, a {
-    display: block;
-  }
-}
-
-.resume {
-  h2 {
-    text-align: center;
-  }
-  li {
-    padding: 10px;
-    color: $secondary-color;
-  }
 }
 
 footer {
@@ -249,4 +159,61 @@ footer {
     float: none;
     text-align: center;
   }
+}
+
+@media screen and (max-width: 600px){
+    body {
+      background: $secondary-color;
+    }
+
+    .nav-bar ul{
+      flex-direction: column;
+      padding: 0;
+    }
+    .nav-item{ 
+      background: $secondary-color;
+      padding: 10px 20px;
+
+      width: 100%;
+      a{
+        color: #fff;
+      }
+    }
+
+    .nav-item:hover{
+      background: $primary-color;
+
+      a{
+        border-bottom: 2px solid transparent;
+      }
+    }
+
+    h2, h3, p, label { color: #fff; }
+
+    a{ color: $primary-color; }
+
+    .content{
+      flex-direction: column;
+      flex-wrap: wrap;
+      margin-top: 200px;
+    }
+
+    .conteiner{
+      align-self: center;
+      flex-basis: 95%;
+      margin: 0;
+      width: 90%;
+    }
+
+    .btn{
+      border: 1px solid #fff;
+      border-radius: 8px;
+      color: #fff;
+    }
+
+    .btn:hover{
+      border: 1px solid $primary-color;
+      border-radius: 8px;
+      color: $primary-color;
+    }
 }
