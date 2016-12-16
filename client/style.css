@@ -53,63 +53,43 @@ header::after {
 .nav-bar {
   height: 80px; }
   .nav-bar ul {
-    float: right;
-    list-style-type: none;
-    overflow: hidden;
-    height: 100%; }
-  .nav-bar li {
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     height: 100%;
-    width: 75px; }
-  .nav-bar li:hover:not(.logo) {
-    background-color: #6be5b4; }
-    .nav-bar li:hover:not(.logo) a {
-      color: #fff; }
-  .nav-bar .logo {
-    float: left;
-    text-align: center;
-    line-height: 80px;
-    padding: 0 16px;
-    height: 100%; }
+    list-style-type: none;
+    padding: 10px 12px; }
+
+.logo-item {
+  flex-grow: 5; }
 
 .nav-item {
-  display: block;
+  border-bottom: 2px solid transparent;
+  flex-grow: 1;
+  transition: all 0.2s ease-in-out;
   color: #555;
   text-align: center;
-  line-height: 80px;
-  padding: 0 16px;
-  position: relative;
-  height: 100%; }
+  padding: 10px 0; }
+
+.nav-item:hover {
+  border-bottom: 2px solid #6be5b4; }
 
 .scrolled {
   box-shadow: 0 0 5px #555; }
 
-#small-menu {
-  display: none; }
-
 @media screen and (max-width: 600px) {
   body {
     background: #555; }
-  #small-menu {
-    display: block;
-    float: right; }
   .nav-bar ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    height: auto; }
-    .nav-bar ul li {
-      display: block;
-      height: 50px;
-      width: 100%; }
-      .nav-bar ul li a {
-        display: block;
-        line-height: 50px;
-        height: 100%;
-        padding: 0;
-        width: 100%; }
+    flex-direction: column;
+    padding: 0; }
+  .nav-item {
+    background: #555;
+    width: 100%; }
+    .nav-item a {
+      color: #fff; }
+  .nav-item:hover {
+    background: #6be5b4; }
   .content {
     width: 100% !important; }
   h2, h3, p, label {
@@ -128,9 +108,10 @@ header::after {
     float: none; } }
 
 .content {
-  padding-top: 120px;
+  padding: 10px;
+  padding-top: 100px;
   margin: 0 auto;
-  width: 900px; }
+  width: auto; }
 
 .main-page a {
   color: #6be5b4; }

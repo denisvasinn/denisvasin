@@ -65,82 +65,49 @@ header::after{
   height: 80px;
 
   ul{
-    float: right;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
     list-style-type: none;
-    overflow: hidden;
-    height: 100%;
-  }
-
-  li{
-    display: inline-block;
-    height: 100%;
-    width: 75px;
-  }
-
-  li:hover:not(.logo) {
-    background-color: $primary-color;
-
-    a{
-      color: #fff;
-    }
-  }
-
-  .logo {
-    float: left;
-    text-align: center;
-    line-height: 80px;
-    padding: 0 16px;
-    height: 100%;
+    padding: 10px 12px;
   }
 }
+
+.logo-item{ flex-grow: 5; }
 
 .nav-item{
-    display: block;
+    border-bottom: 2px solid transparent;
+    flex-grow: 1;
+    transition: all 0.2s ease-in-out;
     color: $secondary-color;
     text-align: center;
-    line-height: 80px;
-    padding: 0 16px;
-    position: relative;
-    height: 100%;
+    padding: 10px 0;
 }
 
-.scrolled {
-  box-shadow: 0 0 5px $secondary-color;
-}
+.nav-item:hover { border-bottom: 2px solid $primary-color; }
 
-#small-menu { display: none; }
+.scrolled { box-shadow: 0 0 5px $secondary-color; }
 
 @media screen and (max-width: 600px){
     body {
       background: $secondary-color;
     }
 
-    #small-menu{ 
-      display: block;
-      float: right;
+    .nav-bar ul{
+      flex-direction: column;
+      padding: 0;
+    }
+    .nav-item{ 
+      background: $secondary-color;
+      width: 100%;
+      a{
+        color: #fff;
+      }
     }
 
-    .nav-bar ul{
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      height: auto;
-
-      li{
-        display: block;
-        height: 50px;
-        width: 100%;
-
-        a{
-          display: block;
-          line-height: 50px;
-          height: 100%;
-          padding: 0;
-          width: 100%;
-        }
-      }
+    .nav-item:hover{
+      background: $primary-color;
     }
 
     .content { width: 100% !important; }
@@ -168,9 +135,10 @@ header::after{
 }
 
 .content {
-  padding-top: 120px;
+  padding: 10px;
+  padding-top: 100px;
   margin: 0 auto;
-  width: 900px;
+  width: auto;
 }
 
 .main-page {
