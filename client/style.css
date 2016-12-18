@@ -52,7 +52,8 @@ header {
   flex-grow: 5; }
 
 .nav-item {
-  flex-grow: 1;
+  flex-grow: 0.5;
+  flex-basis: 10px;
   transition: all 0.2s ease-in-out;
   color: #555;
   text-align: center; }
@@ -78,13 +79,15 @@ header {
 .conteiner {
   margin: 0 30px;
   padding: 10px; }
+  .conteiner a {
+    color: #6be5b4; }
 
 .image {
   border-radius: 300px;
   height: 300px;
   width: 300px; }
 
-.contact, .q-start {
+.contact, .q-message {
   align-self: flex-start;
   flex-basis: 45%; }
 

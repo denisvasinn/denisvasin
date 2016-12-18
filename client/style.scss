@@ -62,7 +62,8 @@ header {
 .logo-item{ flex-grow: 5; }
 
 .nav-item{
-    flex-grow: 1;
+    flex-grow: 0.5;
+    flex-basis: 10px;
     transition: all 0.2s ease-in-out;
     color: $secondary-color;
     text-align: center;
@@ -90,6 +91,8 @@ header {
 .conteiner{
   margin: 0 30px;
   padding: 10px;
+
+   a{ color: $primary-color; }
 }
 
 .image{
@@ -98,7 +101,7 @@ header {
   width: 300px;
 }
 
-.contact, .q-start{
+.contact, .q-message{
   align-self: flex-start;
   flex-basis: 45%;
 }

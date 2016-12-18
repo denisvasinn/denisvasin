@@ -3,12 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { FormsModule } from '@angular/forms'
+import { HttpModule } from '@angular/http';
 
 
-import {AppComponent} from './app.component';
-import {HomeComponent} from './home.component';
-import {AboutComponent} from './about.component';
-import {ContactComponent} from './contact.component';
+import { AppComponent } from './app.component';
+import { HomeComponent } from './home.component';
+import { AboutComponent } from './about.component';
+import { ContactComponent } from './contact.component';
+
+import { MessageService } from './message.service';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -21,6 +24,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
     RouterModule.forRoot(routes)
   ],
   declarations: [
@@ -29,8 +33,8 @@ const routes: Routes = [
     AboutComponent,
     ContactComponent
     ],
-  bootstrap: [AppComponent],
-  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }]
+  providers: [ MessageService, { provide: LocationStrategy, useClass: HashLocationStrategy }],
+  bootstrap: [AppComponent]
 })
 
 export class AppModule { }

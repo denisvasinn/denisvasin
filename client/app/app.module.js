@@ -10,10 +10,12 @@ var platform_browser_1 = require('@angular/platform-browser');
 var router_1 = require('@angular/router');
 var common_1 = require('@angular/common');
 var forms_1 = require('@angular/forms');
+var http_1 = require('@angular/http');
 var app_component_1 = require('./app.component');
 var home_component_1 = require('./home.component');
 var about_component_1 = require('./about.component');
 var contact_component_1 = require('./contact.component');
+var message_service_1 = require('./message.service');
 var routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: home_component_1.HomeComponent },
@@ -28,6 +30,7 @@ var AppModule = (function () {
             imports: [
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
+                http_1.HttpModule,
                 router_1.RouterModule.forRoot(routes)
             ],
             declarations: [
@@ -36,8 +39,8 @@ var AppModule = (function () {
                 about_component_1.AboutComponent,
                 contact_component_1.ContactComponent
             ],
-            bootstrap: [app_component_1.AppComponent],
-            providers: [{ provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy }]
+            providers: [message_service_1.MessageService, { provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy }],
+            bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);
     return AppModule;

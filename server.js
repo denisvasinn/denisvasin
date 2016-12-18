@@ -4,6 +4,7 @@ var config = require('./config');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
+var message = require('./routes/message');
 
 var app = express();
 
@@ -20,6 +21,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.use('/', index);
+app.use('/message', message);
 
 //Error handler
 app.use((err, req, res, next) => {

@@ -1,6 +1,9 @@
+import { Inject } from '@angular/core';
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 
 import { Message } from './message';
+import { MessageService } from './message.service';
 
 @Component({
   moduleId: module.id,
@@ -54,9 +57,9 @@ import { Message } from './message';
                   placeholder="E-mail" >
           </div>
           <div class="form-group">
-            <textarea type="text" class="form-control" id="message"
-                  [(ngModel)]="model.message" name="message"
-                  #message="ngModel"
+            <textarea type="text" class="form-control" id="data"
+                  [(ngModel)]="model.data" name="data"
+                  #data="ngModel"
                   placeholder="Message"
                   rows="5" >
             </textarea>
@@ -74,9 +77,15 @@ import { Message } from './message';
 export class ContactComponent {
   public model: Message = new Message();
   private submited: boolean = false;
+  private messageService: MessageService;
+
+  constructor(@Inject(MessageService) messageService){
+    this.messageService = messageService;
+   }
 
   onSubmit(){
     this.submited = true;
-    console.log(this.model);
+    this.messageService.send(this.model)
+    .subscribe(res => alert('successfully sent'), (err) => console.log(err));
   }
- }
+}
