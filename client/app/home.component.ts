@@ -3,10 +3,10 @@ import { Component } from '@angular/core';
 @Component({
   template: `
     <div class="content">
-      <div class="conteiner">
-        <img class="image" src="/images/photo.jpg" alt="Photo">
+      <div class="photo-container">
+        <img class="photo" src="/images/photo.jpg" alt="Photo">
       </div>
-      <div class="conteiner">
+      <div class="grt">
         <p> Ahoy there! My name is Denis. I am 22 years old and i am student. I am really like JavaScript.
          If you want to see my projects please visit my 
           <a href="https://github.com/denisvasinn">GitHub</a>.

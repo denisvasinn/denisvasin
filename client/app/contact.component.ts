@@ -10,7 +10,7 @@ import { MessageService } from './message.service';
   template: `
     <div class="content">
       
-      <div class="conteiner contact">
+      <div class="container contact">
         <h3>Contact</h3>
         <hr>
         <div class="form-group">
@@ -34,7 +34,7 @@ import { MessageService } from './message.service';
         </div>
       </div>
 
-      <div class="conteiner q-message">
+      <div class="container q-message">
         <h3>Quick Message</h3>
         <hr>
         <form (ngSubmit)="onSubmit()" #messageForm="ngForm">
