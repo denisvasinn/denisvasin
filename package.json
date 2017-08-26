@@ -1,34 +1,34 @@
 {
-  "name": "denisvasin",
-  "version": "1.0.0",
-  "description": "personal site",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/denisvasinn/denisvasin.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/denisvasinn/denisvasin/issues"
-  },
-  "homepage": "https://github.com/denisvasinn/denisvasin#readme",
-  "dependencies": {
-    "body-parser": "^1.15.2",
-    "ejs": "^2.5.2",
-    "emailjs": "^1.0.8",
-    "express": "^5.0.0-alpha.2",
-    "gulp": "^3.0",
-    "gulp-clean": "^0.3.2",
-    "gulp-sass": "^2.3.2",
-    "gulp-typescript": "^3.1.2",
-    "node-sass": "^3.11.2",
-    "typescript": "^2"
-  },
-  "devDependencies": {
-    "typescript": "^2.0.8"
-  }
+    "name": "denisvasin",
+    "version": "1.0.0",
+    "description": "personal site",
+    "main": "server/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server/index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/denisvasinn/denisvasin.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/denisvasinn/denisvasin/issues"
+    },
+    "homepage": "https://github.com/denisvasinn/denisvasin#readme",
+    "dependencies": {
+        "body-parser": "^1.15.2",
+        "ejs": "^2.5.2",
+        "emailjs": "^1.0.8",
+        "express": "^5.0.0-alpha.2"
+    },
+    "devDependencies": {
+        "typescript": "^2.0.8",
+        "gulp": "^3.0",
+        "gulp-clean": "^0.3.2",
+        "gulp-sass": "^2.3.2",
+        "gulp-typescript": "^3.1.2",
+        "node-sass": "^3.11.2"
+    }
 }

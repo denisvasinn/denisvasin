@@ -1,21 +1,16 @@
 'use strict';
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var ts = require('gulp-typescript');
-var clean = require('gulp-clean');
-
-//gulp.task('clean', () => {
-//    return gulp.src('./client/**/*.js')
-//    .pipe(clean());
-//});
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const ts = require('gulp-typescript');
+const clean = require('gulp-clean');
 
 gulp.task('sass', () => {
   return gulp.src('./client/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./client'));
+      .pipe(sass().on('error', sass.logError))
+      .pipe(gulp.dest('./client'));
 });
- 
+
 gulp.task('sass:watch', () => {
     gulp.watch('./client/*.scss', ['sass']);
 });

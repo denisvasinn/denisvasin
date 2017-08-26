@@ -8,9 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-var core_1 = require('@angular/core');
-var core_2 = require('@angular/core');
-var http_1 = require('@angular/http');
+exports.__esModule = true;
+var core_1 = require("@angular/core");
+var core_2 = require("@angular/core");
+var http_1 = require("@angular/http");
 var MessageService = (function () {
     function MessageService(http) {
         this.http = http;

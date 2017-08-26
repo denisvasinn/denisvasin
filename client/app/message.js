@@ -1,4 +1,5 @@
 "use strict";
+exports.__esModule = true;
 var Message = (function () {
     function Message(name, email, subject, data) {
         if (name === void 0) { name = ''; }
